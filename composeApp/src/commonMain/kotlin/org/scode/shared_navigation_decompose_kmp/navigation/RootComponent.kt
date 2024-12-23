@@ -11,7 +11,6 @@ import kotlinx.serialization.Serializable
 class RootComponent(
     componentContext: ComponentContext
 ): ComponentContext by componentContext {
-
     private val navigation = StackNavigation<Configuration>()
     val childStack = childStack(
         source = navigation,
@@ -46,12 +45,10 @@ class RootComponent(
             )
         }
     }
-
     sealed class Child {
         data class ScreenA(val component: ScreenAComponent): Child()
         data class ScreenB(val component: ScreenBComponent): Child()
     }
-
     @Serializable
     sealed class Configuration {
         @Serializable

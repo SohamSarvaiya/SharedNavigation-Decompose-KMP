@@ -7,7 +7,6 @@ class ScreenBComponent(
     componentContext: ComponentContext,
     private val onGoBack: () -> Unit
 ): ComponentContext by componentContext {
-
     fun goBack() {
         onGoBack()
     }

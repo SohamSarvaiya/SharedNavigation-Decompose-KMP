@@ -11,7 +11,6 @@ class ScreenAComponent(
 
     private var _text = MutableValue("")
     val text: Value<String> = _text
-
     fun onEvent(event: ScreenAEvent) {
         when(event) {
             ScreenAEvent.ClickButtonA -> onNavigateToScreenB(text.value)
